@@ -1,0 +1,159 @@
+.text-editor {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+
+.dashboard button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.dashboard button:hover {
+  background-color: #45a049;
+}
+
+.dashboard button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.font-size-input {
+  display: flex;
+  align-items: center;
+}
+
+.font-size-input input {
+  width: 50px;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.color-palette, .font-style-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+
+.color-palette input[type="color"] {
+  margin-right: 10px;
+}
+
+.font-style-picker button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.font-style-picker button:hover {
+  background-color: #007B9A;
+}
+
+.editor-area {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.text-element {
+  position: absolute;
+  cursor: move;
+  user-select: none;
+}
+
+.text-element textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+  background: transparent;
+  font-family: inherit;
+  color: inherit;
+  outline: none;
+  overflow: hidden;
+}
+
+.text-element.selected {
+  outline: 2px solid #4CAF50;
+}
+
+.drag-handle {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 15px;
+  background-color: #4CAF50;
+  cursor: move;
+}
+
+.rotation-handle {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 20px;
+  height: 20px;
+  background-color: #008CBA;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.resize-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+}
+
+.resize-handle.top-left {
+  top: -5px;
+  left: -5px;
+  cursor: nwse-resize;
+}
+
+.resize-handle.top-right {
+  top: -5px;
+  right: -5px;
+  cursor: nesw-resize;
+}
+
+.resize-handle.bottom-left {
+  bottom: -5px;
+  left: -5px;
+  cursor: nesw-resize;
+}
+
+.resize-handle.bottom-right {
+  bottom: -5px;
+  right: -5px;
+  cursor: nwse-resize;
+}
